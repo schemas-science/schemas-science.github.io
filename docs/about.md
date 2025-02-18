@@ -2,7 +2,7 @@
 
 ## What is schemas.science?
 
-**[schemas.science](https://schemas.science)** is a community effort which aims at improving the Findability on the Web
+**[schemas.science](https://schemas.science)** is a community effort which aims to improve the Findability on the Web
 of scientific research data, products and resources.
 
 ## Website
