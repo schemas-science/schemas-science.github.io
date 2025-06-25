@@ -4,7 +4,7 @@
 | Name              | Description                          | Guidance |
 | :---------------- | :----------------------------------- | :------- |
 {% for p in profiles -%}
-| {{p["name"]}} | {{p["description"]}}  | |
+| {{p["name"]}} | {{p["description"]}}  | {{p["guidance"]}} |
 {% endfor %}
 
 {% endblock %}
