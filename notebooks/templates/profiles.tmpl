@@ -1,10 +1,10 @@
 {% extends "index.tmpl" %}
 {% block content %}
 
-| Name              | Description                          |
-| :---------------- | :----------------------------------- |
+| Name              | Description                          | Guidance |
+| :---------------- | :----------------------------------- | :------- |
 {% for p in profiles -%}
-| {{p["name"]}} | {{p["description"]}}  |
+| {{p["name"]}} | {{p["description"]}}  | |
 {% endfor %}
 
 {% endblock %}
