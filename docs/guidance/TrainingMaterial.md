@@ -13,13 +13,18 @@ A recorded webinar exploring the science of climate change and the complexities 
 {
     "@context": "https://schema.org",
     "@type": "LearningResource",
+    "http://purl.org/dc/terms/conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
+    },
     "name": "Climate Change and Policy Making",
     "description": "A webinar discussing the scientific basis of climate change and how international and national policies are shaped in response.",
     "keywords": ["climate change", "policy", "environmental science", "sustainability"],
     "audience": {
         "@type": "EducationalAudience",
-        "educationalLevel": "Graduate"
+        "audienceType": "Graduate students in Environmental Science"
     },
+    "educationalLevel": "Graduate",
     "about": {
         "@type": "Thing",
         "name": "Environmental Policy"
@@ -33,10 +38,6 @@ A recorded webinar exploring the science of climate change and the complexities 
         "@type": "Event",
         "name": "UNEP Climate Education Webinar Series 2025",
         "startDate": "2025-04-15"
-    },
-    "isPartOf": {
-        "@type": "Series",
-        "name": "Climate Education Series 2025"
     }
 }
 ```
@@ -47,13 +48,15 @@ A recorded webinar exploring the science of climate change and the complexities 
 graph LR
 LearningResource_ClimateChangeAndPolicyMaking["LearningResource: Climate Change and Policy Making"]
 Thing_EnvironmentalPolicy["Thing: Environmental Policy"]
-EducationalAudience_Graduate["EducationalAudience: Graduate"]
+Text_Graduate["Text: Graduate"]
+EducationalAudience_Graduate["EducationalAudience: Graduate students in Environmental Science"]
 Organization_UNEP["Organization: United Nations Environment Programme"]
 Event_UNEPWebinar["Event: UNEP Climate Education Webinar Series 2025"]
 Series_ClimateSeries2025["Series: Climate Education Series 2025"]
 
 LearningResource_ClimateChangeAndPolicyMaking -->|about| Thing_EnvironmentalPolicy
 LearningResource_ClimateChangeAndPolicyMaking -->|audience| EducationalAudience_Graduate
+LearningResource_ClimateChangeAndPolicyMaking -->|educationalLevel| Text_Graduate
 LearningResource_ClimateChangeAndPolicyMaking -->|author| Organization_UNEP
 LearningResource_ClimateChangeAndPolicyMaking -->|recordedAt| Event_UNEPWebinar
 LearningResource_ClimateChangeAndPolicyMaking -->|isPartOf| Series_ClimateSeries2025

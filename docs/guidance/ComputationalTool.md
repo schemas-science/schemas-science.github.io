@@ -13,6 +13,10 @@ The [ComputationalTool](/profiles/ComputationalTool/) profile fits into the sche
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
+  "http://purl.org/dc/terms/conformsTo": {
+    "@id": "https://bioschemas.org/profiles/ComputationalTool/1.0-RELEASE",
+    "@type": "CreativeWork"
+  },
   "name": "EcoModeler",
   "description": "A scientific modeling tool for simulating carbon emissions, land-use change, and policy impact on global climate scenarios.",
   "url": "https://ecomod.org",
