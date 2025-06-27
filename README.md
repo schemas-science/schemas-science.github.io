@@ -26,10 +26,10 @@ The process to write these internal pages is currently:
 1. Select the schemas.science profile and the coresponding schema.org type/profile.
 2. Write a prompt for an LLM (see below) to generate an example, including JSON-LD and a Mermaid diagram.
 3. Create a new file in `docs/guidance/`, similar to TrainingMaterial.md, named after the schemas.science profile.
-4. Update the new file with the title, introduction, example, JSON-LD, and diagram. The diagram will render with MKDocs. 
+4. Update the new file with the title, introduction, example, JSON-LD, and diagram. The diagram will render with MKDocs. The `conformsTo` property needs to be added manually. [Validate](https://validator.schema.org/) the JSON-LD code.
 5. Open Jupyter Notebook, load `notebooks/Profiles_index.ipynb`, update the dictionary with the new guidance page and run. 
-6Render the page locally with `mkdocs serve`.
-7Make a pull request.
+6. Render the page locally with `mkdocs serve`.
+7. Make a pull request.
 8. When the request is approved and merged, GitHub Actions will rebuild the site.
 
 ### Example prompt (TrainingMaterial) part 1
