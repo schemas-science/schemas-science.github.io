@@ -1,0 +1,58 @@
+{
+  "title": "FormalParameter",
+  "hierarchy": "[Thing](http://schema.org/Thing) > [CreativeWork](http://schema.org/CreativeWork) > [FormalParameter](https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE)",
+  "json": {
+    "@context": "https://schema.org",
+    "@type": "FormalParameter",
+    "http://purl.org/dc/terms/conformsTo": {
+      "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE",
+      "@type": "CreativeWork"
+    },
+    "name": "Simulation Temperature",
+    "description": "Defines the thermal energy of the system within a Monte Carlo or molecular dynamics simulation, typically expressed in Kelvin. This parameter influences the kinetic energy of particles and the system's phase behavior.",
+    "keywords": [
+      "materials science",
+      "computational physics",
+      "statistical mechanics",
+      "simulation",
+      "temperature",
+      "Monte Carlo",
+      "molecular dynamics"
+    ],
+    "about": {
+      "@type": "Thing",
+      "name": "Computational Materials Science"
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "National Institute of Standards and Technology (NIST)",
+      "url": "https://www.nist.gov/"
+    },
+    "dct:identifier": "https://example.org/formal-parameters/simulation-temperature-v1",
+    "defaultValue": 300,
+    "maxValue": 2000,
+    "minValue": 0.1,
+    "unitText": "Kelvin",
+    "valueRequired": true,
+    "valueType": {
+      "@id": "http://schema.org/Number",
+      "@type": "DataType"
+    },
+    "exampleOfWork": [
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "LAMMPS Molecular Dynamics Simulator",
+        "url": "https://www.lammps.org/",
+        "description": "A classical molecular dynamics code widely used for simulating particle systems, where temperature is a key input parameter."
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Grand Canonical Monte Carlo Workflow for Adsorption Studies",
+        "url": "https://example.org/workflows/gcmc_adsorption_workflow",
+        "description": "A computational workflow demonstrating the use of 'Simulation Temperature' for grand canonical Monte Carlo simulations of gas adsorption in porous materials."
+      }
+    ],
+    "version": "1.0",
+    "license": "https://creativecommons.org/licenses/by/4.0/"
+  }
+}
