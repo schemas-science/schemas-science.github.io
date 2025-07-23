@@ -5,83 +5,57 @@
     "@context": "https://schema.org",
     "@type": "DataCatalog",
     "http://purl.org/dc/terms/conformsTo": {
-      "@id": "https://bioschemas.org/profiles/DataCatalog/0.4-RELEASE",
+      "@id": "https://bioschemas.org/profiles/DataCatalog/0.3-DRAFT",
       "@type": "CreativeWork"
     },
-    "name": "Hubble Space Telescope Public Data Archive",
-    "description": "A comprehensive catalog providing access to all public data collected by the Hubble Space Telescope, including images, spectra, and time-series observations, alongside associated calibration and metadata.",
-    "url": "https://archive.stsci.edu/hst/",
+    "name": "Advanced Aerospace Alloys Data Catalog",
+    "description": "A curated collection of datasets containing experimental and computational data for advanced metallic alloys, specifically those relevant to aerospace applications. Includes mechanical, thermal, and corrosion properties.",
+    "url": "https://aerospacealloysdata.org/catalog",
     "keywords": [
-      "astronomy",
-      "space telescope",
-      "Hubble",
-      "observational data",
-      "cosmology",
-      "galaxies",
-      "stars",
-      "planets"
+      "materials science",
+      "aerospace alloys",
+      "mechanical properties",
+      "thermal properties",
+      "corrosion resistance",
+      "data standards",
+      "metallurgy"
     ],
     "publisher": {
       "@type": "Organization",
-      "name": "Space Telescope Science Institute (STScI)",
-      "url": "https://www.stsci.edu/"
+      "name": "Global Aerospace Materials Consortium",
+      "url": "https://global-aerospace-materials.org/"
     },
     "creator": {
       "@type": "Organization",
-      "name": "NASA",
-      "url": "https://www.nasa.gov/"
+      "name": "Materials Data Initiative",
+      "url": "https://materials-data-initiative.org/"
     },
-    "funder": {
-      "@type": "Organization",
-      "name": "National Aeronautics and Space Administration (NASA)",
-      "url": "https://www.nasa.gov/"
+    "datePublished": "2023-10-26",
+    "dateModified": "2024-06-01",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "about": {
+      "@type": "Thing",
+      "name": "Materials Engineering",
+      "sameAs": "http://dbpedia.org/resource/Materials_science"
     },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "Astrophysics"
-      },
-      {
-        "@type": "Thing",
-        "name": "Observational Astronomy"
-      }
-    ],
-    "citation": "Hubble Space Telescope Public Data Archive. Space Telescope Science Institute. DOI: 10.17909/T9BP4K (example DOI for data access)",
-    "dateModified": "2023-10-26",
-    "version": "1.0",
-    "dataset": [
+    "hasPart": [
       {
         "@type": "Dataset",
-        "name": "HST Frontier Fields Data Release 2.0",
-        "description": "Data from the Hubble Frontier Fields program, focusing on observations of galaxy clusters acting as gravitational lenses, including imaging and spectroscopic data.",
-        "url": "https://archive.stsci.edu/prepds/frontier/",
-        "keywords": [
-          "gravitational lensing",
-          "galaxy clusters",
-          "deep field",
-          "cosmology"
-        ],
-        "datePublished": "2018-04-15",
-        "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-        "spatialCoverage": "RA: 10h00m00s, Dec: +02d00m00s",
-        "temporalCoverage": "2013-10-01/2017-06-30"
+        "name": "High-Temperature Tensile Strength of Ti-6Al-4V",
+        "description": "Tensile strength data for Ti-6Al-4V alloy at various elevated temperatures and strain rates.",
+        "url": "https://aerospacealloysdata.org/dataset/ti6al4v-tensile"
       },
       {
         "@type": "Dataset",
-        "name": "Exoplanet Transit Spectroscopy with WFC3/UVIS",
-        "description": "Spectroscopic observations of exoplanet transits using the Wide Field Camera 3 (WFC3) and Ultraviolet/Visible (UVIS) channel, aimed at characterizing exoplanet atmospheres.",
-        "url": "https://archive.stsci.edu/prepds/wfc3exoplanets/",
-        "keywords": [
-          "exoplanets",
-          "spectroscopy",
-          "atmospheres",
-          "transit",
-          "WFC3"
-        ],
-        "datePublished": "2020-11-01",
-        "license": "https://creativecommons.org/licenses/by/4.0/",
-        "spatialCoverage": "Specific stellar targets",
-        "temporalCoverage": "2010-01-01/2020-09-30"
+        "name": "Corrosion Resistance of Novel Al-Li Alloys",
+        "description": "Experimental data on the electrochemical corrosion rates of new Aluminum-Lithium alloys in simulated saltwater environments.",
+        "url": "https://aerospacealloysdata.org/dataset/alliali-corrosion"
+      },
+      {
+        "@type": "Dataset",
+        "name": "Fatigue Life of Superalloys for Turbine Blades",
+        "description": "Cyclic fatigue life data and S-N curves for various nickel-based superalloys under high-cycle fatigue conditions.",
+        "url": "https://aerospacealloysdata.org/dataset/superalloy-fatigue"
       }
     ]
   }

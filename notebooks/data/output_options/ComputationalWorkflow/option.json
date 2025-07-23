@@ -1,6 +1,6 @@
 {
   "title": "ComputationalWorkflow",
-  "hierarchy": "[Thing](http://schema.org/Thing) > [CreativeWork](http://schema.org/CreativeWork) > [SoftwareSourceCode](http://schema.org/SoftwareSourceCode)",
+  "hierarchy": "[Thing](http://schema.org/Thing) > [CreativeWork](http://schema.org/CreativeWork) > [SoftwareSourceCode](http://schema.org/SoftwareSourceCode) > [ComputationalWorkflow](https://bioschemas.org/profiles/ComputationalWorkflow/)",
   "json": {
     "@context": "https://schema.org",
     "@type": "ComputationalWorkflow",
@@ -8,99 +8,90 @@
       "@id": "https://bioschemas.org/profiles/ComputationalWorkflow/1.0-RELEASE",
       "@type": "CreativeWork"
     },
-    "name": "DFT Electronic Structure Simulation Workflow",
-    "description": "A robust computational workflow for performing Density Functional Theory (DFT) simulations to predict and analyze the electronic band structure and density of states of semiconductor materials. The workflow automates input file generation, execution of DFT codes, and post-processing of results, including visualization.",
+    "name": "Galaxy Formation and Evolution Simulation Workflow",
+    "description": "A comprehensive computational workflow for simulating the formation and co-evolution of dark matter halos and baryonic structures, such as stars and gas, into galaxies within a cosmological context. It includes modules for initial condition generation, N-body dynamics, smoothed particle hydrodynamics (SPH), stellar feedback, black hole accretion, and post-processing analysis.",
     "keywords": [
-      "DFT",
-      "density functional theory",
-      "materials science",
-      "semiconductor",
-      "band structure",
-      "density of states",
-      "computational physics",
-      "VASP",
-      "Quantum ESPRESSO"
+      "astrophysics",
+      "cosmology",
+      "galaxy evolution",
+      "N-body simulation",
+      "SPH",
+      "dark matter",
+      "baryonic matter",
+      "supercomputers"
     ],
-    "applicationCategory": "Simulation",
     "programmingLanguage": [
-      "Python",
-      "Bash"
+      "Fortran",
+      "C++",
+      "Python"
     ],
-    "runtimePlatform": [
-      "Linux",
-      "HPC Cluster (Slurm)"
-    ],
+    "applicationCategory": "Computational Astrophysics",
     "softwareRequirements": [
       {
         "@type": "SoftwareApplication",
-        "name": "VASP",
-        "url": "https://www.vasp.at/"
+        "name": "MPI (Message Passing Interface)",
+        "description": "For parallel execution across multiple nodes.",
+        "url": "https://www.mpi-forum.org/"
       },
       {
         "@type": "SoftwareApplication",
-        "name": "Quantum ESPRESSO",
-        "url": "https://www.quantum-espresso.org/"
+        "name": "OpenMP",
+        "description": "For shared-memory parallelism within a node.",
+        "url": "https://www.openmp.org/"
       },
       {
         "@type": "SoftwareApplication",
-        "name": "pymatgen",
-        "url": "https://pymatgen.org/"
+        "name": "HDF5",
+        "description": "For efficient storage and retrieval of simulation data.",
+        "url": "https://www.hdfgroup.org/solutions/hdf5/"
       },
       {
         "@type": "SoftwareApplication",
-        "name": "Matplotlib",
-        "url": "https://matplotlib.org/"
+        "name": "NumPy & SciPy",
+        "description": "Python libraries for numerical operations and scientific computing.",
+        "url": "https://numpy.org/"
+      },
+      {
+        "@type": "ComputerHardware",
+        "name": "High-Performance Computing (HPC) Cluster",
+        "description": "Requires significant computational resources (CPU cores, RAM, storage) typically found in supercomputing centers."
       }
     ],
-    "input": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Crystal Structure File",
-        "encodingFormat": "Chemical Markup Language (CML) or Crystallographic Information File (CIF)",
-        "description": "Input file describing the atomic positions and lattice parameters of the material."
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "DFT Parameter File",
-        "encodingFormat": "Text/VASP INCAR format",
-        "description": "Configuration file specifying DFT calculation parameters (e.g., k-point mesh, exchange-correlation functional)."
-      }
-    ],
-    "output": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Electronic Band Structure Data",
-        "encodingFormat": "Text/JSON",
-        "description": "Data points for the calculated electronic band structure along high-symmetry k-paths."
-      },
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "Density of States Data",
-        "encodingFormat": "Text/JSON",
-        "description": "Data for the total and projected density of states."
-      },
-      {
-        "@type": "ImageObject",
-        "name": "Band Structure Plot",
-        "encodingFormat": "image/png",
-        "description": "Visual representation of the electronic band structure."
-      },
-      {
-        "@type": "ImageObject",
-        "name": "Density of States Plot",
-        "encodingFormat": "image/png",
-        "description": "Visual representation of the density of states."
-      }
-    ],
-    "producer": {
+    "operatingSystem": "Linux",
+    "license": "https://opensource.org/licenses/MIT",
+    "codeRepository": "https://github.com/example-astro/galaxy-sim-workflow",
+    "author": {
       "@type": "Organization",
-      "name": "National Renewable Energy Laboratory (NREL)",
-      "url": "https://www.nrel.gov/"
+      "name": "Max Planck Institute for Astrophysics",
+      "url": "https://www.mpa-garching.mpg.de/"
     },
-    "license": "https://opensource.org/licenses/Apache-2.0",
-    "dateCreated": "2023-10-26",
-    "version": "1.2",
-    "url": "https://github.com/materials-workflows/dft-bandstructure-workflow",
-    "citation": "J. Doe et al., 'Automated DFT Workflows for Semiconductor Material Discovery', Journal of Computational Materials, 2024, DOI: 10.xxxx/j.jcomat.2024.xxxxxx"
+    "maintainer": {
+      "@type": "Person",
+      "name": "Dr. Elias Thorne",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Cosmic Simulations Research Group"
+      }
+    },
+    "version": "2.1.0",
+    "dateModified": "2024-03-10",
+    "schemaVersion": "https://schema.org/docs/releases.html#v20.0",
+    "creativeWorkStatus": "Active",
+    "url": "https://example-astro.org/galaxy-sim-workflow",
+    "about": {
+      "@type": "Thing",
+      "name": "Galaxy Formation",
+      "description": "The astrophysical process by which galaxies form and evolve over cosmic timescales."
+    },
+    "input": {
+      "@type": "CreativeWork",
+      "name": "Initial Cosmological Conditions",
+      "description": "Input files specifying the initial distribution of dark matter and baryonic particles, including cosmological parameters (e.g., Omega_m, Omega_b, H_0, sigma_8). Typically generated by a separate perturbation code."
+    },
+    "output": {
+      "@type": "CreativeWork",
+      "name": "Simulated Galaxy Catalogs and Snapshots",
+      "description": "Output data including particle snapshots at various cosmic times, properties of identified galaxies and halos (e.g., mass, stellar mass, star formation rates, merger trees), and derived observable quantities."
+    }
   }
 }

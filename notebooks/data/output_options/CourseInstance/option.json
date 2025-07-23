@@ -1,54 +1,65 @@
 {
   "title": "CourseInstance",
-  "hierarchy": "[Thing](http://schema.org/Thing) > [Event](http://schema.org/Event) > [CourseInstance](https://schema.org/CourseInstance)",
+  "hierarchy": "[Thing](http://schema.org/Thing) > [Event](http://schema.org/Event) > [CourseInstance](http://schema.org/CourseInstance)",
   "json": {
     "@context": "https://schema.org",
     "@type": "CourseInstance",
     "http://purl.org/dc/terms/conformsTo": {
-      "@id": "https://bioschemas.org/profiles/CourseInstance/1.0-RELEASE",
+      "@id": "https://bioschemas.org/profiles/Course/1.0-RELEASE",
       "@type": "CreativeWork"
     },
-    "name": "Introduction to Quantum Computing - Spring 2024",
-    "description": "This course instance provides a comprehensive introduction to the foundational principles of quantum computing. It covers quantum mechanics essentials, quantum gates, circuits, and explores key algorithms like Grover's and Shor's. Hands-on exercises with a quantum SDK (e.g., Qiskit) are included.",
-    "keywords": [
-      "quantum computing",
-      "quantum mechanics",
-      "quantum algorithms",
-      "Qiskit",
-      "computational science"
-    ],
-    "courseMode": "Online",
-    "startDate": "2024-03-01",
-    "endDate": "2024-05-31",
+    "name": "Introduction to Quantum Gravity - Fall 2024",
+    "description": "An intensive graduate-level course instance for the Fall 2024 semester, exploring the current theoretical frameworks and challenges in unifying quantum mechanics with general relativity, including string theory, loop quantum gravity, and emergent gravity concepts. This course will be delivered in a blended format, combining online lectures with in-person discussion sessions.",
+    "courseMode": "Blended",
+    "startDate": "2024-09-02",
+    "endDate": "2024-12-13",
+    "course": {
+      "@type": "Course",
+      "name": "Introduction to Quantum Gravity",
+      "description": "This is the general curriculum for the Quantum Gravity course, covering advanced topics in theoretical physics.",
+      "coursePrerequisites": "Graduate-level knowledge of Quantum Mechanics and General Relativity.",
+      "educationalCredentialAwarded": "Certificate of Completion"
+    },
     "location": {
       "@type": "VirtualLocation",
-      "url": "https://example.edu/quantum-computing-spring2024"
+      "url": "https://university.example.edu/quantum-gravity-virtual-classroom",
+      "name": "Online Quantum Gravity Classroom"
     },
     "provider": {
       "@type": "Organization",
-      "name": "Global Tech University",
-      "url": "https://example.edu"
+      "name": "University of Cambridge",
+      "department": {
+        "@type": "Organization",
+        "name": "Department of Applied Mathematics and Theoretical Physics (DAMTP)"
+      },
+      "url": "https://www.damtp.cam.ac.uk/"
     },
     "instructor": {
       "@type": "Person",
-      "name": "Dr. Elara Vance",
-      "url": "https://example.edu/elara-vance",
+      "name": "Prof. Alice Quantum",
+      "url": "https://university.example.edu/prof-quantum-profile",
       "affiliation": {
         "@type": "Organization",
-        "name": "Department of Computer Science"
+        "name": "University of Cambridge, DAMTP"
       }
     },
-    "courseWorkload": "PT10H",
-    "course": {
-      "@type": "Course",
-      "name": "Introduction to Quantum Computing",
-      "url": "https://example.edu/courses/quantum-computing-course"
+    "audience": {
+      "@type": "EducationalAudience",
+      "audienceType": "Graduate students in Physics",
+      "educationalLevel": "Graduate"
     },
-    "about": {
-      "@type": "Thing",
-      "name": "Quantum Information Science"
+    "inLanguage": "en-US",
+    "offers": {
+      "@type": "Offer",
+      "price": "1500",
+      "priceCurrency": "GBP",
+      "url": "https://university.example.edu/quantum-gravity-enrollment-fall2024",
+      "availability": "http://schema.org/InStock",
+      "validFrom": "2024-06-01",
+      "validThrough": "2024-08-15",
+      "category": "Course Fee"
     },
-    "educationalLevel": "Undergraduate",
-    "prerequisites": "Basic understanding of linear algebra and programming (e.g., Python)."
+    "maximumAttendeeCapacity": 100,
+    "eventStatus": "http://schema.org/EventScheduled"
   }
 }

@@ -2,12 +2,10 @@
 
 The [ComputationalWorkflow](/profiles/ComputationalWorkflow/) profile fits into the schema.org hierarchy as follows:
 
-[Thing](http://schema.org/Thing) > [CreativeWork](http://schema.org/CreativeWork) > [SoftwareSourceCode](http://schema.org/SoftwareSourceCode)
-
-This profile is designed to describe a series of computational steps or processes, often used in scientific research for data analysis, simulation, or modeling. It captures essential metadata such as the programming languages used, required software, input/output data types, and execution environment.
+[Thing](http://schema.org/Thing) > [CreativeWork](http://schema.org/CreativeWork) > [SoftwareSourceCode](http://schema.org/SoftwareSourceCode) > [ComputationalWorkflow](https://bioschemas.org/profiles/ComputationalWorkflow/)
 
 ## Example using ComputationalWorkflow
-A workflow designed to simulate the electronic band structure and density of states for novel semiconductor materials using density functional theory (DFT) principles. This workflow integrates multiple software tools and scripts to automate the calculation, analysis, and visualization of material properties.
+A complex simulation workflow designed to model the formation and evolution of galaxies from initial cosmological conditions. It incorporates N-body simulations for dark matter and hydrodynamics for baryonic matter, producing detailed properties of galaxies over cosmic time.
 
 ### JSON-LD code
 
@@ -19,84 +17,87 @@ A workflow designed to simulate the electronic band structure and density of sta
         "@id": "https://bioschemas.org/profiles/ComputationalWorkflow/1.0-RELEASE",
         "@type": "CreativeWork"
     },
-    "name": "DFT Electronic Structure Simulation Workflow",
-    "description": "A robust computational workflow for performing Density Functional Theory (DFT) simulations to predict and analyze the electronic band structure and density of states of semiconductor materials. The workflow automates input file generation, execution of DFT codes, and post-processing of results, including visualization.",
-    "keywords": ["DFT", "density functional theory", "materials science", "semiconductor", "band structure", "density of states", "computational physics", "VASP", "Quantum ESPRESSO"],
-    "applicationCategory": "Simulation",
-    "programmingLanguage": ["Python", "Bash"],
-    "runtimePlatform": ["Linux", "HPC Cluster (Slurm)"],
+    "name": "Galaxy Formation and Evolution Simulation Workflow",
+    "description": "A comprehensive computational workflow for simulating the formation and co-evolution of dark matter halos and baryonic structures, such as stars and gas, into galaxies within a cosmological context. It includes modules for initial condition generation, N-body dynamics, smoothed particle hydrodynamics (SPH), stellar feedback, black hole accretion, and post-processing analysis.",
+    "keywords": [
+        "astrophysics",
+        "cosmology",
+        "galaxy evolution",
+        "N-body simulation",
+        "SPH",
+        "dark matter",
+        "baryonic matter",
+        "supercomputers"
+    ],
+    "programmingLanguage": ["Fortran", "C++", "Python"],
+    "applicationCategory": "Computational Astrophysics",
     "softwareRequirements": [
         {
             "@type": "SoftwareApplication",
-            "name": "VASP",
-            "url": "https://www.vasp.at/"
+            "name": "MPI (Message Passing Interface)",
+            "description": "For parallel execution across multiple nodes.",
+            "url": "https://www.mpi-forum.org/"
         },
         {
             "@type": "SoftwareApplication",
-            "name": "Quantum ESPRESSO",
-            "url": "https://www.quantum-espresso.org/"
+            "name": "OpenMP",
+            "description": "For shared-memory parallelism within a node.",
+            "url": "https://www.openmp.org/"
         },
         {
             "@type": "SoftwareApplication",
-            "name": "pymatgen",
-            "url": "https://pymatgen.org/"
+            "name": "HDF5",
+            "description": "For efficient storage and retrieval of simulation data.",
+            "url": "https://www.hdfgroup.org/solutions/hdf5/"
         },
         {
             "@type": "SoftwareApplication",
-            "name": "Matplotlib",
-            "url": "https://matplotlib.org/"
+            "name": "NumPy & SciPy",
+            "description": "Python libraries for numerical operations and scientific computing.",
+            "url": "https://numpy.org/"
+        },
+        {
+            "@type": "ComputerHardware",
+            "name": "High-Performance Computing (HPC) Cluster",
+            "description": "Requires significant computational resources (CPU cores, RAM, storage) typically found in supercomputing centers."
         }
     ],
-    "input": [
-        {
-            "@type": "SoftwareSourceCode",
-            "name": "Crystal Structure File",
-            "encodingFormat": "Chemical Markup Language (CML) or Crystallographic Information File (CIF)",
-            "description": "Input file describing the atomic positions and lattice parameters of the material."
-        },
-        {
-            "@type": "SoftwareSourceCode",
-            "name": "DFT Parameter File",
-            "encodingFormat": "Text/VASP INCAR format",
-            "description": "Configuration file specifying DFT calculation parameters (e.g., k-point mesh, exchange-correlation functional)."
-        }
-    ],
-    "output": [
-        {
-            "@type": "SoftwareSourceCode",
-            "name": "Electronic Band Structure Data",
-            "encodingFormat": "Text/JSON",
-            "description": "Data points for the calculated electronic band structure along high-symmetry k-paths."
-        },
-        {
-            "@type": "SoftwareSourceCode",
-            "name": "Density of States Data",
-            "encodingFormat": "Text/JSON",
-            "description": "Data for the total and projected density of states."
-        },
-        {
-            "@type": "ImageObject",
-            "name": "Band Structure Plot",
-            "encodingFormat": "image/png",
-            "description": "Visual representation of the electronic band structure."
-        },
-        {
-            "@type": "ImageObject",
-            "name": "Density of States Plot",
-            "encodingFormat": "image/png",
-            "description": "Visual representation of the density of states."
-        }
-    ],
-    "producer": {
+    "operatingSystem": "Linux",
+    "license": "https://opensource.org/licenses/MIT",
+    "codeRepository": "https://github.com/example-astro/galaxy-sim-workflow",
+    "author": {
         "@type": "Organization",
-        "name": "National Renewable Energy Laboratory (NREL)",
-        "url": "https://www.nrel.gov/"
+        "name": "Max Planck Institute for Astrophysics",
+        "url": "https://www.mpa-garching.mpg.de/"
     },
-    "license": "https://opensource.org/licenses/Apache-2.0",
-    "dateCreated": "2023-10-26",
-    "version": "1.2",
-    "url": "https://github.com/materials-workflows/dft-bandstructure-workflow",
-    "citation": "J. Doe et al., 'Automated DFT Workflows for Semiconductor Material Discovery', Journal of Computational Materials, 2024, DOI: 10.xxxx/j.jcomat.2024.xxxxxx"
+    "maintainer": {
+        "@type": "Person",
+        "name": "Dr. Elias Thorne",
+        "affiliation": {
+            "@type": "Organization",
+            "name": "Cosmic Simulations Research Group"
+        }
+    },
+    "version": "2.1.0",
+    "dateModified": "2024-03-10",
+    "schemaVersion": "https://schema.org/docs/releases.html#v20.0",
+    "creativeWorkStatus": "Active",
+    "url": "https://example-astro.org/galaxy-sim-workflow",
+    "about": {
+        "@type": "Thing",
+        "name": "Galaxy Formation",
+        "description": "The astrophysical process by which galaxies form and evolve over cosmic timescales."
+    },
+    "input": {
+        "@type": "CreativeWork",
+        "name": "Initial Cosmological Conditions",
+        "description": "Input files specifying the initial distribution of dark matter and baryonic particles, including cosmological parameters (e.g., Omega_m, Omega_b, H_0, sigma_8). Typically generated by a separate perturbation code."
+    },
+    "output": {
+        "@type": "CreativeWork",
+        "name": "Simulated Galaxy Catalogs and Snapshots",
+        "description": "Output data including particle snapshots at various cosmic times, properties of identified galaxies and halos (e.g., mass, stellar mass, star formation rates, merger trees), and derived observable quantities."
+    }
 }
 ```
 
@@ -104,43 +105,37 @@ A workflow designed to simulate the electronic band structure and density of sta
 
 ```mermaid
 graph LR
-ComputationalWorkflow_DFT["ComputationalWorkflow: DFT Electronic Structure Simulation Workflow"]
+ComputationalWorkflow_GalaxySim["ComputationalWorkflow: Galaxy Formation and Evolution Simulation Workflow"]
 
-Organization_NREL["Organization: National Renewable Energy Laboratory (NREL)"]
+SoftwareSourceCode_Repo["SoftwareSourceCode: https://github.com/example-astro/galaxy-sim-workflow"]
+Organization_MPIA["Organization: Max Planck Institute for Astrophysics"]
+Person_EThorne["Person: Dr. Elias Thorne"]
+CreativeWork_License["CreativeWork: MIT License"]
+Thing_Input["CreativeWork: Initial Cosmological Conditions"]
+Thing_Output["CreativeWork: Simulated Galaxy Catalogs and Snapshots"]
+Text_Fortran["Text: Fortran"]
+Text_Cplusplus["Text: C++"]
 Text_Python["Text: Python"]
-Text_Bash["Text: Bash"]
-Text_Linux["Text: Linux"]
-Text_HPC["Text: HPC Cluster (Slurm)"]
+SoftwareApplication_MPI["SoftwareApplication: MPI"]
+SoftwareApplication_OpenMP["SoftwareApplication: OpenMP"]
+SoftwareApplication_HDF5["SoftwareApplication: HDF5"]
+SoftwareApplication_NumPySciPy["SoftwareApplication: NumPy & SciPy"]
+ComputerHardware_HPC["ComputerHardware: HPC Cluster"]
+Thing_GalaxyFormation["Thing: Galaxy Formation"]
 
-SoftwareApplication_VASP["SoftwareApplication: VASP"]
-SoftwareApplication_QE["SoftwareApplication: Quantum ESPRESSO"]
-SoftwareApplication_pymatgen["SoftwareApplication: pymatgen"]
-SoftwareApplication_Matplotlib["SoftwareApplication: Matplotlib"]
-
-Input_CrystalStructure["SoftwareSourceCode: Crystal Structure File (CML/CIF)"]
-Input_DFTParams["SoftwareSourceCode: DFT Parameter File (VASP INCAR)"]
-
-Output_BandData["SoftwareSourceCode: Electronic Band Structure Data (JSON)"]
-Output_DOSData["SoftwareSourceCode: Density of States Data (JSON)"]
-Output_BandPlot["ImageObject: Band Structure Plot (PNG)"]
-Output_DOSPlot["ImageObject: Density of States Plot (PNG)"]
-
-ComputationalWorkflow_DFT -->|producer| Organization_NREL
-ComputationalWorkflow_DFT -->|programmingLanguage| Text_Python
-ComputationalWorkflow_DFT -->|programmingLanguage| Text_Bash
-ComputationalWorkflow_DFT -->|runtimePlatform| Text_Linux
-ComputationalWorkflow_DFT -->|runtimePlatform| Text_HPC
-
-ComputationalWorkflow_DFT -->|softwareRequirements| SoftwareApplication_VASP
-ComputationalWorkflow_DFT -->|softwareRequirements| SoftwareApplication_QE
-ComputationalWorkflow_DFT -->|softwareRequirements| SoftwareApplication_pymatgen
-ComputationalWorkflow_DFT -->|softwareRequirements| SoftwareApplication_Matplotlib
-
-ComputationalWorkflow_DFT -->|input| Input_CrystalStructure
-ComputationalWorkflow_DFT -->|input| Input_DFTParams
-
-ComputationalWorkflow_DFT -->|output| Output_BandData
-ComputationalWorkflow_DFT -->|output| Output_DOSData
-ComputationalWorkflow_DFT -->|output| Output_BandPlot
-ComputationalWorkflow_DFT -->|output| Output_DOSPlot
+ComputationalWorkflow_GalaxySim -->|codeRepository| SoftwareSourceCode_Repo
+ComputationalWorkflow_GalaxySim -->|author| Organization_MPIA
+ComputationalWorkflow_GalaxySim -->|maintainer| Person_EThorne
+ComputationalWorkflow_GalaxySim -->|license| CreativeWork_License
+ComputationalWorkflow_GalaxySim -->|input| Thing_Input
+ComputationalWorkflow_GalaxySim -->|output| Thing_Output
+ComputationalWorkflow_GalaxySim -->|programmingLanguage| Text_Fortran
+ComputationalWorkflow_GalaxySim -->|programmingLanguage| Text_Cplusplus
+ComputationalWorkflow_GalaxySim -->|programmingLanguage| Text_Python
+ComputationalWorkflow_GalaxySim -->|softwareRequirements| SoftwareApplication_MPI
+ComputationalWorkflow_GalaxySim -->|softwareRequirements| SoftwareApplication_OpenMP
+ComputationalWorkflow_GalaxySim -->|softwareRequirements| SoftwareApplication_HDF5
+ComputationalWorkflow_GalaxySim -->|softwareRequirements| SoftwareApplication_NumPySciPy
+ComputationalWorkflow_GalaxySim -->|softwareRequirements| ComputerHardware_HPC
+ComputationalWorkflow_GalaxySim -->|about| Thing_GalaxyFormation
 ```

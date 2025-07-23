@@ -1,6 +1,6 @@
 {
   "title": "FormalParameter",
-  "hierarchy": "[Thing](http://schema.org/Thing) > [CreativeWork](http://schema.org/CreativeWork) > [FormalParameter](https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE)",
+  "hierarchy": "[Thing](http://schema.org/Thing) > [CreativeWork](http://schema.org/CreativeWork) > [SoftwareSourceCode](http://schema.org/SoftwareSourceCode) > [FormalParameter](https://bioschemas.org/profiles/FormalParameter/)",
   "json": {
     "@context": "https://schema.org",
     "@type": "FormalParameter",
@@ -8,51 +8,34 @@
       "@id": "https://bioschemas.org/profiles/FormalParameter/1.0-RELEASE",
       "@type": "CreativeWork"
     },
-    "name": "Simulation Temperature",
-    "description": "Defines the thermal energy of the system within a Monte Carlo or molecular dynamics simulation, typically expressed in Kelvin. This parameter influences the kinetic energy of particles and the system's phase behavior.",
+    "name": "Learning Rate",
+    "description": "The step size at each iteration while moving toward a minimum of a loss function during neural network training. A critical hyperparameter in machine learning.",
     "keywords": [
-      "materials science",
-      "computational physics",
-      "statistical mechanics",
-      "simulation",
-      "temperature",
-      "Monte Carlo",
-      "molecular dynamics"
+      "machine learning",
+      "hyperparameter",
+      "neural network",
+      "optimization",
+      "deep learning"
     ],
-    "about": {
-      "@type": "Thing",
-      "name": "Computational Materials Science"
+    "valueType": "Float",
+    "defaultValue": 0.001,
+    "minValue": 1e-05,
+    "maxValue": 0.1,
+    "parameterType": "Input",
+    "unitText": "dimensionless",
+    "identifier": "ml_param_learningRate_v1",
+    "codeRepository": "https://github.com/myorg/ml-models/tree/main/src/training_scripts",
+    "isPartOf": {
+      "@type": "SoftwareSourceCode",
+      "name": "Neural Network Training Script",
+      "url": "https://github.com/myorg/ml-models/blob/main/src/training_scripts/train_nn.py"
     },
-    "creator": {
+    "author": {
       "@type": "Organization",
-      "name": "National Institute of Standards and Technology (NIST)",
-      "url": "https://www.nist.gov/"
+      "name": "AI Research Lab",
+      "url": "https://ai-research.org"
     },
-    "dct:identifier": "https://example.org/formal-parameters/simulation-temperature-v1",
-    "defaultValue": 300,
-    "maxValue": 2000,
-    "minValue": 0.1,
-    "unitText": "Kelvin",
-    "valueRequired": true,
-    "valueType": {
-      "@id": "http://schema.org/Number",
-      "@type": "DataType"
-    },
-    "exampleOfWork": [
-      {
-        "@type": "SoftwareSourceCode",
-        "name": "LAMMPS Molecular Dynamics Simulator",
-        "url": "https://www.lammps.org/",
-        "description": "A classical molecular dynamics code widely used for simulating particle systems, where temperature is a key input parameter."
-      },
-      {
-        "@type": "CreativeWork",
-        "name": "Grand Canonical Monte Carlo Workflow for Adsorption Studies",
-        "url": "https://example.org/workflows/gcmc_adsorption_workflow",
-        "description": "A computational workflow demonstrating the use of 'Simulation Temperature' for grand canonical Monte Carlo simulations of gas adsorption in porous materials."
-      }
-    ],
-    "version": "1.0",
-    "license": "https://creativecommons.org/licenses/by/4.0/"
+    "dateCreated": "2023-10-26",
+    "version": "1.0"
   }
 }

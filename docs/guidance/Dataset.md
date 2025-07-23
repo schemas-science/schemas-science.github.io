@@ -1,0 +1,82 @@
+# Guidance for using Dataset
+
+The [Dataset](/profiles/Dataset/) profile fits into the schema.org hierarchy as follows:
+
+[Thing](http://schema.org/Thing) > [CreativeWork](http://schema.org/CreativeWork) > [Dataset](http://schema.org/Dataset)
+
+## Example using Dataset
+A comprehensive dataset containing observational light curve data from the Kepler K2 mission's later campaigns, focused on detecting exoplanet transits. It includes raw and processed light curves, stellar parameters, and metadata crucial for exoplanet research.
+
+### JSON-LD code
+
+```json
+{
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Dataset/1.0-RELEASE",
+        "@type": "CreativeWork"
+    },
+    "name": "Kepler K2 Transit Survey Data Release 10",
+    "description": "Observational data from the Kepler K2 mission, comprising processed light curves and associated stellar parameters for thousands of stars, utilized for detecting and characterizing exoplanets via the transit method. This release specifically covers K2 Campaigns 15 through 18.",
+    "keywords": [
+        "exoplanet",
+        "Kepler",
+        "K2 mission",
+        "transit method",
+        "astronomy",
+        "light curve",
+        "observational data",
+        "astrophysics"
+    ],
+    "about": {
+        "@type": "Thing",
+        "name": "Exoplanets"
+    },
+    "creator": {
+        "@type": "Organization",
+        "name": "NASA Ames Research Center",
+        "url": "https://www.nasa.gov/centers/ames/"
+    },
+    "datePublished": "2023-01-20",
+    "url": "https://archive.stsci.edu/k2/data/dr10",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "variableMeasured": "Relative flux, stellar coordinates (RA, Dec), K2 Campaign ID, observation timestamps, object identifiers (KIC/EPIC IDs)",
+    "spatialCoverage": {
+        "@type": "Place",
+        "description": "Specific K2 fields of view in the ecliptic plane, targeting diverse astronomical objects."
+    },
+    "temporalCoverage": "2017-05-01/2018-09-27",
+    "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "application/x-fits",
+        "contentUrl": "https://archive.stsci.edu/pub/k2/DR10/archive.fits.tar.gz",
+        "name": "K2 DR10 FITS Data Archive"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Space Telescope Science Institute (STScI)",
+        "url": "https://www.stsci.edu/"
+    }
+}
+```
+
+### Diagram
+
+```mermaid
+graph LR
+Dataset_KeplerK2DR10["Dataset: Kepler K2 Transit Survey Data Release 10"]
+Thing_Exoplanets["Thing: Exoplanets"]
+Organization_NASA["Organization: NASA Ames Research Center"]
+Organization_STScI["Organization: Space Telescope Science Institute (STScI)"]
+CreativeWork_License["CreativeWork: CC BY 4.0"]
+DataDownload_FITS["DataDownload: K2 DR10 FITS Data Archive"]
+Place_K2Fields["Place: Specific K2 fields of view in the ecliptic plane"]
+
+Dataset_KeplerK2DR10 -->|about| Thing_Exoplanets
+Dataset_KeplerK2DR10 -->|creator| Organization_NASA
+Dataset_KeplerK2DR10 -->|publisher| Organization_STScI
+Dataset_KeplerK2DR10 -->|license| CreativeWork_License
+Dataset_KeplerK2DR10 -->|distribution| DataDownload_FITS
+Dataset_KeplerK2DR10 -->|spatialCoverage| Place_K2Fields
+```
