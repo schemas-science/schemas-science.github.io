@@ -4,6 +4,10 @@ The [ComputationalWorkflow](/profiles/ComputationalWorkflow/) profile fits into 
 
 [Thing](http://schema.org/Thing) > [CreativeWork](http://schema.org/CreativeWork) > [SoftwareSourceCode](http://schema.org/SoftwareSourceCode) > [ComputationalWorkflow](https://bioschemas.org/profiles/ComputationalWorkflow/)
 
+!!! warning
+    The following examples have been written with the support of generative AI and may be incomplete or inaccurate.
+    Please [contact us](https://github.com/schemas-science/schemas-science.github.io/issues/new) with any feedback, suggestions or corrections.
+
 ## Example using ComputationalWorkflow
 A complex simulation workflow designed to model the formation and evolution of galaxies from initial cosmological conditions. It incorporates N-body simulations for dark matter and hydrodynamics for baryonic matter, producing detailed properties of galaxies over cosmic time.
 

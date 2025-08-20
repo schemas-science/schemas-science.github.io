@@ -4,6 +4,10 @@ The [ComputationalTool](/profiles/ComputationalTool/) profile fits into the sche
 
 [Thing](http://schema.org/Thing) > [CreativeWork](http://schema.org/CreativeWork) > [SoftwareApplication](http://schema.org/SoftwareApplication)
 
+!!! warning
+    The following examples have been written with the support of generative AI and may be incomplete or inaccurate.
+    Please [contact us](https://github.com/schemas-science/schemas-science.github.io/issues/new) with any feedback, suggestions or corrections.
+
 ## Example using SoftwareApplication
 **EcoModeler** is a (fictional) software suite designed to model carbon emissions and land-use scenarios under various climate policy assumptions. It integrates GIS data with predictive modeling for climate science research.
 

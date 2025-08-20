@@ -4,6 +4,10 @@ The [Dataset](/profiles/Dataset/) profile fits into the schema.org hierarchy as 
 
 [Thing](http://schema.org/Thing) > [CreativeWork](http://schema.org/CreativeWork) > [Dataset](http://schema.org/Dataset)
 
+!!! warning
+    The following examples have been written with the support of generative AI and may be incomplete or inaccurate.
+    Please [contact us](https://github.com/schemas-science/schemas-science.github.io/issues/new) with any feedback, suggestions or corrections.
+
 ## Example using Dataset
 A comprehensive dataset containing observational light curve data from the Kepler K2 mission's later campaigns, focused on detecting exoplanet transits. It includes raw and processed light curves, stellar parameters, and metadata crucial for exoplanet research.
 

@@ -4,6 +4,10 @@ The [CourseInstance](http://schema.org/CourseInstance) profile fits into the sch
 
 [Thing](http://schema.org/Thing) > [Event](http://schema.org/Event) > [CourseInstance](http://schema.org/CourseInstance)
 
+!!! warning
+    The following examples have been written with the support of generative AI and may be incomplete or inaccurate.
+    Please [contact us](https://github.com/schemas-science/schemas-science.github.io/issues/new) with any feedback, suggestions or corrections.
+
 ## Example using CourseInstance
 A specific instance of a graduate-level course instance, offered in a blended format, focusing on the foundational concepts and modern theories of quantum gravity, provided by a leading university.
 

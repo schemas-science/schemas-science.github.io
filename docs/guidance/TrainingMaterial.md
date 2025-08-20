@@ -4,6 +4,10 @@ The [TrainingMaterial](/profiles/TrainingMaterial/) profile fits into the schema
 
 [Thing](http://schema.org/Thing) > [CreativeWork](http://schema.org/CreativeWork) > [LearningResource](http://schema.org/LearningResource)
 
+!!! warning
+    The following examples have been written with the support of generative AI and may be incomplete or inaccurate.
+    Please [contact us](https://github.com/schemas-science/schemas-science.github.io/issues/new) with any feedback, suggestions or corrections.
+
 ## Example using LearningResource
 A recorded webinar exploring the science of climate change and the complexities of policy-making processes. Aimed at graduate students and policy professionals.
 

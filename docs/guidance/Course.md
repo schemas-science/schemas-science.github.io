@@ -4,6 +4,10 @@ The [Course](http://schema.org/Course) profile fits into the schema.org hierarch
 
 [Thing](http://schema.org/Thing) > [CreativeWork](http://schema.org/CreativeWork) > [Course](http://schema.org/Course)
 
+!!! warning
+    The following examples have been written with the support of generative AI and may be incomplete or inaccurate.
+    Please [contact us](https://github.com/schemas-science/schemas-science.github.io/issues/new) with any feedback, suggestions or corrections.
+
 ## Example using Course
 An advanced university course exploring theoretical and computational methods used to predict and understand the properties of materials. Aimed at postgraduate students and researchers in related scientific and engineering disciplines.
 

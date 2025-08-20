@@ -4,6 +4,10 @@ The [DataCatalog](http://schema.org/DataCatalog) profile fits into the schema.or
 
 [Thing](http://schema.org/Thing) > [CreativeWork](http://schema.org/CreativeWork) > [DataCatalog](http://schema.org/DataCatalog)
 
+!!! warning
+    The following examples have been written with the support of generative AI and may be incomplete or inaccurate.
+    Please [contact us](https://github.com/schemas-science/schemas-science.github.io/issues/new) with any feedback, suggestions or corrections.
+
 ## Example using DataCatalog
 A comprehensive catalog of datasets detailing the properties of advanced aerospace alloys, including experimental and computational data on their mechanical, thermal, and corrosion characteristics. This catalog is published by a global consortium and created by a materials data initiative.
 

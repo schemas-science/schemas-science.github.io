@@ -4,6 +4,10 @@ The [FormalParameter](https://bioschemas.org/profiles/FormalParameter/) profile 
 
 [Thing](http://schema.org/Thing) > [CreativeWork](http://schema.org/CreativeWork) > [SoftwareSourceCode](http://schema.org/SoftwareSourceCode) > [FormalParameter](https://bioschemas.org/profiles/FormalParameter/)
 
+!!! warning
+    The following examples have been written with the support of generative AI and may be incomplete or inaccurate.
+    Please [contact us](https://github.com/schemas-science/schemas-science.github.io/issues/new) with any feedback, suggestions or corrections.
+
 ## Example using FormalParameter
 A `FormalParameter` representing the 'Learning Rate' in a machine learning neural network training script. This parameter defines the step size for updating model weights during optimization, crucial for controlling convergence and stability.
 
