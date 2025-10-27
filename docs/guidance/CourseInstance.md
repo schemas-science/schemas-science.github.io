@@ -18,7 +18,7 @@ A specific instance of a graduate-level course instance, offered in a blended fo
     "@context": "https://schema.org",
     "@type": "CourseInstance",
     "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Course/1.0-RELEASE",
+        "@id": "https://bioschemas.org/profiles/CourseInstance/1.0-RELEASE",
         "@type": "CreativeWork"
     },
     "name": "Introduction to Quantum Gravity - Fall 2024",
